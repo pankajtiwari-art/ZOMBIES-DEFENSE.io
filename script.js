@@ -1,4 +1,3 @@
-<script>
 // ═══════════════════════════════════════════════════════════════
 //  ZOMBIES DEFENSE.IO  —  Complete Game Engine
 // ═══════════════════════════════════════════════════════════════
@@ -1596,4 +1595,3 @@ function changeDiff() {
 function showLeaderboard() {
   document.getElementById('lbModal').style.display = 'flex';
 }
-</script>
