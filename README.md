@@ -7,8 +7,9 @@ Level up, choose powerful upgrades, and see how long you can last.
 
 ## 🎮 Play Now
 
-Just open the [`index.html`](index.html) file in any modern browser – no server required.  
-['Play here' ](#https://pankajtiwari-art.github.io/ZOMBIES-DEFENSE.io/)
+Just open the [index.html](index.html) file in any modern browser – no server required.
+
+[Play here](https://pankajtiwari-art.github.io/ZOMBIES-DEFENSE.io/)
 
 ---
 
