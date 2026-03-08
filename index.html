@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zombies Defense.io</title>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+</style>
+</head>
+<body>
+
+<!-- MENU -->
+<div id="menu">
+  <div id="menuBg"></div>
+  <div id="menuTitle">
+    <h1>🧟 ZOMBIES DEFENSE.io</h1>
+    <div class="sub">SURVIVE THE ENDLESS HORDE</div>
+    <div class="bio">TOP-DOWN SURVIVAL · AUTO-SHOOT · UPGRADE</div>
+  </div>
+  <button class="menuBtn primary" onclick="startGame()"><span class="btnIcon">▶</span>START GAME</button>
+  <button class="menuBtn" onclick="showSettings()"><span class="btnIcon">⚙</span>SETTINGS</button>
+  <button class="menuBtn" onclick="showLeaderboard()"><span class="btnIcon">🏆</span>LEADERBOARD</button>
+  <div class="menuControls">
+    <span>WASD / ARROWS = MOVE</span>
+    <span>·</span>
+    <span>AUTO-AIM + AUTO-SHOOT</span>
+    <span>·</span>
+    <span>COLLECT XP ORBS</span>
+    <span>·</span>
+    <span>LEVEL UP = CHOOSE UPGRADE</span>
+  </div>
+</div>
+
+<!-- HUD -->
+<div id="hud">
+  <div class="hudRow">
+    <div class="hudBar">
+      <div class="hudBarLabel" id="hpLabel">HP</div>
+      <div class="barBg" id="hpBarBg"><div class="barFill" id="hpFill" style="width:100%"></div></div>
+      <div id="hpVal">100/100</div>
+      <div id="sideUpgrades" style="position:fixed; top:70px; left:16px; display:flex; flex-direction:column; gap:8px; pointer-events:none;">
+      </div>
+    </div>
+    <div class="hudBar">
+      <div class="hudBarLabel" id="xpLabel">XP</div>
+      <div class="barBg" id="xpBarBg"><div class="barFill" id="xpFill" style="width:0%"></div></div>
+      <div id="lvlBadge">LV 1</div>
+    </div>
+    <div class="hudStats">
+      <div class="statChip">Wave <b id="sWave">1</b></div>
+      <div class="statChip">Kills <b id="sKills">0</b></div>
+      <div class="statChip">Score <b id="sScore">0</b></div>
+    </div>
+  </div>
+</div>
+
+<div id="waveAnnounce">WAVE 1</div>
+
+<!-- UPGRADE -->
+<div id="upgradeScreen">
+  <h2>⬆ LEVEL UP!</h2>
+  <div id="upgLevel">LEVEL 2</div>
+  <div class="upgCards" id="upgCards"></div>
+</div>
+
+<!-- GAME OVER -->
+<div id="gameOver">
+  <h2>YOU DIED</h2>
+  <div class="goStats" id="goStats"></div>
+  <div class="goBtns">
+    <button class="menuBtn primary" onclick="restartGame()"><span class="btnIcon">↺</span>PLAY AGAIN</button>
+    <button class="menuBtn" onclick="goToMenu()"><span class="btnIcon">⌂</span>MENU</button>
+  </div>
+</div>
+
+<!-- MINIMAP -->
+<canvas id="minimap" width="140" height="90"></canvas>
+
+<!-- LEADERBOARD COMING SOON -->
+<div id="lbModal">
+  <div id="lbBox">
+    <span class="lbIcon">🏆</span>
+    <h3>LEADERBOARD</h3>
+    <div class="lbSub">Global Rankings</div>
+    <div class="lbMsg">
+      Online leaderboards are <b>coming soon!</b><br>
+      Track your score locally for now and<br>
+      compete globally when we launch!
+    </div>
+    <div class="lbDots"><div class="lbDot"></div><div class="lbDot"></div><div class="lbDot"></div></div>
+    <button class="menuBtn" onclick="document.getElementById('lbModal').style.display='none'"><span class="btnIcon">✕</span>CLOSE</button>
+  </div>
+</div>
+<div id="settingsModal">
+  <div id="settingsBox">
+    <h3>SETTINGS</h3>
+    <div class="settingRow">
+      <span>SOUND EFFECTS</span>
+      <button class="settingBtn" id="btnSound" onclick="toggleSetting('sound')">ON</button>
+    </div>
+    <div class="settingRow">
+      <span>AUTO-AIM</span>
+      <button class="settingBtn" id="btnAim" onclick="toggleSetting('aim')">ON</button>
+    </div>
+    <div class="settingRow">
+      <span>AUTO-SHOOT</span>
+      <button class="settingBtn" id="btnShoot" onclick="toggleSetting('shoot')">ON</button>
+    </div>
+    
+    <div class="sliderCont">
+      <div class="sliderLabel">
+        <span>DIFFICULTY</span>
+        <span id="diffValText">MEDIUM 1</span>
+      </div>
+      <input type="range" id="diffSlider" class="diffSlider" min="1" max="7" value="3" oninput="changeDiff()">
+    </div>
+    <br>
+    <button class="menuBtn primary" onclick="closeSettings()"><span class="btnIcon">✕</span>CLOSE</button>
+  </div>
+</div>
+
+<!-- JOYSTICK -->
+<div id="joystickZone">
+  <div id="joystickBase">
+    <div id="joystickKnob"></div>
+  </div>
+</div>
+
+<canvas id="gc"></canvas>
+
+<script>
+</script>
+</body>
+</html>
