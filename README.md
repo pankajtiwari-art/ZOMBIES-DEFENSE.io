@@ -3,14 +3,12 @@
 **Survive endless hordes of zombies in this top‑down auto‑shooter!**  
 Level up, choose powerful upgrades, and see how long you can last.
 
-![Game Screenshot](screenshot.png)
-
 ---
 
 ## 🎮 Play Now
 
 Just open the [`index.html`](index.html) file in any modern browser – no server required.  
-Or [play online here](#) (if hosted).
+Or [play online here](#https://pankajtiwari-art.github.io/ZOMBIES-DEFENSE.io/) (if hosted).
 
 ---
 
